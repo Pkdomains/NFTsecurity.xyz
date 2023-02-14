@@ -1,111 +1,76 @@
-/* Global styles */
-* {
-  box-sizing: border-box;
-}
-
+/* Set the background color */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  background-color: #2F2F2F;
 }
 
-/* Header styles */
+/* Add a gradient to the header */
 header {
-  background-color: #002147;
-  color: #fff;
-  padding: 1rem;
+  background: linear-gradient(to right, #FF7F50, #FFD700);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
+/* Style the navigation menu */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2F2F2F;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
+/* Style the links in the navigation menu */
 nav a {
-  color: #fff;
+  color: #FFFFFF;
+  font-size: 18px;
   text-decoration: none;
+  margin: 0 20px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #FFD700;
 }
 
-/* Main content styles */
-main {
-  padding: 1rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Form styles */
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-}
-
-label {
-  margin-bottom: 0.5rem;
-}
-
-input, textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 0.5rem;
-  background-color: #002147;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #00367c;
-}
-
-/* Footer styles */
-footer {
-  background-color: #eee;
-  padding: 1rem;
+/* Style the main heading */
+h1 {
+  font-size: 48px;
+  color: #FFFFFF;
+  margin-top: 50px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 0.8rem;
+  text-shadow: 2px 2px #000000;
+}
+
+/* Style the section headings */
+h2 {
+  font-size: 36px;
+  color: #FF7F50;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style the paragraphs */
+p {
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Style the call to action button */
+.cta-button {
+  display: inline-block;
+  background-color: #FFD700;
+  color: #2F2F2F;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF7F50;
+  color: #FFFFFF;
 }
