@@ -9,6 +9,95 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>NFT Security Platform</title>
+  </head>
+  <body>
+    <h1>NFT Security Platform</h1>
+    <div id="user-list"></div>
+
+    <script>
+      const data = {
+        "users": [
+          {
+            "id": 1,
+            "name": "Alice Smith",
+            "email": "alice@example.com",
+            "nfts_owned": [
+              {
+                "id": 1,
+                "name": "CryptoKitty",
+                "description": "A rare digital collectible",
+                "image_url": "https://example.com/cryptokitty.jpg",
+                "security_level": "high"
+              },
+              {
+                "id": 2,
+                "name": "Ethermon",
+                "description": "A legendary digital monster",
+                "image_url": "https://example.com/ethermon.jpg",
+                "security_level": "medium"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Bob Johnson",
+            "email": "bob@example.com",
+            "nfts_owned": [
+              {
+                "id": 3,
+                "name": "CryptoPunk",
+                "description": "An iconic digital collectible",
+                "image_url": "https://example.com/cryptopunk.jpg",
+                "security_level": "high"
+              }
+            ]
+          }
+        ]
+      };
+
+      const userList = document.getElementById('user-list');
+
+      data.users.forEach(user => {
+        const userDiv = document.createElement('div');
+        const userName = document.createElement('h2');
+        const userEmail = document.createElement('p');
+        const nftList = document.createElement('ul');
+
+        userName.textContent = user.name;
+        userEmail.textContent = user.email;
+
+        user.nfts_owned.forEach(nft => {
+          const nftItem = document.createElement('li');
+          const nftName = document.createElement('h3');
+          const nftDescription = document.createElement('p');
+          const nftImage = document.createElement('img');
+          const nftSecurityLevel = document.createElement('p');
+
+          nftName.textContent = nft.name;
+          nftDescription.textContent = nft.description;
+          nftImage.src = nft.image_url;
+          nftSecurityLevel.textContent = `Security level: ${nft.security_level}`;
+
+          nftItem.appendChild(nftName);
+          nftItem.appendChild(nftDescription);
+          nftItem.appendChild(nftImage);
+          nftItem.appendChild(nftSecurityLevel);
+          nftList.appendChild(nftItem);
+        });
+
+        userDiv.appendChild(userName);
+        userDiv.appendChild(userEmail);
+        userDiv.appendChild(nftList);
+        userList.appendChild(userDiv);
+      });
+    </script>
+  </body>
+</html>
+
     <header>
       <h1>NFT Security Platform</h1>
       <nav>
