@@ -1,83 +1,108 @@
-/* Reset the default browser styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Colors */
+:root {
+  --primary-color: #46b4e1;
+  --secondary-color: #2f2f2f;
+  --text-color: #fff;
+  --background-color: #191919;
 }
 
-/* Style the header */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Header styles */
 header {
-  background-color: #23262b;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
-/* Style the logo */
-header h1 {
+.logo {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  text-transform: uppercase;
 }
 
-/* Style the navigation */
-header nav ul {
+nav {
   display: flex;
-  list-style: none;
+  align-items: center;
 }
 
-header nav li {
-  margin-right: 1rem;
-}
-
-header nav a {
-  color: #fff;
+nav a {
+  margin-left: 2rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-header nav a:hover {
-  color: #47d1d1;
+nav a:hover {
+  color: var(--primary-color);
 }
 
-/* Style the hero section */
-#hero {
-  background-image: url('path/to/hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+/* Hero section styles */
+.hero {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#hero h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
+  flex-direction: column;
   text-align: center;
+  background-image: linear-gradient(to bottom right, #46b4e1, #0f1637);
+  background-size: cover;
+  background-position: center center;
 }
 
-#hero p {
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
   font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-/* Style the feature section */
-#features {
-  background-color: #f1f1f1;
-  padding: 2rem;
-}
-
-#features h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
   margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0f1637;
+}
+
+/* Features section styles */
+.features {
+  padding: 5rem 0;
 }
 
 .feature {
@@ -86,57 +111,176 @@ header nav a:hover {
   margin-bottom: 2rem;
 }
 
-.feature i {
-  font-size: 2rem;
-  color: #47d1d1;
-  margin-right: 1rem;
+.feature .icon {
+  font-size: 3rem;
+  margin-right: 2rem;
+  color: var(--primary-color);
 }
 
 .feature h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #23262b;
-  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .feature p {
   font-size: 1.2rem;
-  color: #777;
+  line-height: 1.5;
 }
 
-/* Style the call to action section */
-#call-to-action {
-  background-color: #23262b;
-  color: #fff;
+/* Footer styles */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   padding: 2rem;
-  text-align: center;
 }
 
-#call-to-action h2 {
+.footer-logo {
   font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  text-transform: uppercase
+/* Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #141414;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.header-logo {
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
-#call-to-action p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.header-menu {
+  display: flex;
 }
 
-button {
-  background-color: #47d1d1;
-  color: #fff;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1.2rem;
+.header-menu li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.header-menu li a {
+  color: #ffffff;
+  font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
 }
 
-button:hover {
-  background-color: #fff;
-  color: #23262b;
+.header-menu li a:hover {
+  color: #ffc107;
 }
 
-/* Style the container */
+/* Main Banner Styling */
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: url('../images/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.main-banner h1 {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.main-banner p {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.main-banner-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.main-banner-btn a {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 15px 30px;
+  background-color: #ffc107;
+  color: #141414;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-banner-btn a:hover {
+  background-color: #ffffff;
+  color: #141414;
+}
+
+/* Services Styling */
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+}
+
+.services-item {
+  flex-basis: 30%;
+  text-align: center;
+  padding: 30px;
+  background-color: #141414;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.services-item:hover {
+  transform: translateY(-10px);
+}
+
+.services-item h2 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.services-item p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.services-item i {
+  font-size: 64px
