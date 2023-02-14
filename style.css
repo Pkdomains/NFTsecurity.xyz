@@ -33,6 +33,12 @@ header {
   width: 100%;
   z-index: 999;
 }
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url("assets/logo.gif");
+  background-size: cover;
+}
 
 .logo {
   font-size: 2rem;
