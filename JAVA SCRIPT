@@ -1,33 +1,41 @@
-// Define a function to validate an email address
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-}
+// DOM Elements
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('nav ul');
+const featureSections = document.querySelectorAll('.feature-section');
+const ctaButton = document.querySelector('.cta-button');
 
-// Get the form element from the DOM
-const form = document.querySelector('form');
-
-// Add an event listener to the form submit button
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent the form from submitting normally
-
-  // Get the form input values
-  const name = form.elements['name'].value;
-  const email = form.elements['email'].value;
-  const message = form.elements['message'].value;
-
-  // Validate the email address
-  if (!validateEmail(email)) {
-    alert('Please enter a valid email address.');
-    return;
+// Menu Button Toggle
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('open');
+    navLinks.classList.add('show');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    navLinks.classList.remove('show');
+    menuOpen = false;
   }
+});
 
-  // Send the form data to a server using an API or email service
-  // (This code is just an example and will not actually send the form data)
-  const data = {
-    name: name,
-    email: email,
-    message: message
-  };
-  console.log(data); // Print the form data to the console
+// Feature Sections Animation
+const animationOptions = {
+  threshold: 0.5
+};
+const featureSectionsObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    } else {
+      entry.target.classList.remove('animate');
+    }
+  });
+}, animationOptions);
+featureSections.forEach(section => {
+  featureSectionsObserver.observe(section);
+});
+
+// CTA Button Click
+ctaButton.addEventListener('click', () => {
+  alert('Coming Soon!');
 });
