@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "nfts_owned": [
+        {
+          "id": 1,
+          "name": "CryptoKitty",
+          "description": "A rare digital collectible",
+          "image_url": "https://example.com/cryptokitty.jpg",
+          "security_level": "high"
+        },
+        {
+          "id": 2,
+          "name": "Ethermon",
+          "description": "A legendary digital monster",
+          "image_url": "https://example.com/ethermon.jpg",
+          "security_level": "medium"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "nfts_owned": [
+        {
+          "id": 3,
+          "name": "CryptoPunk",
+          "description": "An iconic digital collectible",
+          "image_url": "https://example.com/cryptopunk.jpg",
+          "security_level": "high"
+        }
+      ]
+    }
+  ]
+}
